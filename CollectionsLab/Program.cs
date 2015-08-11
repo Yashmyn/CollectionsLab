@@ -25,9 +25,9 @@ namespace CollectionsLab
             string more_products_to_add = "Y";
 
             //loop asking for details of products until user states there are no more products to add
-            while (more_products_to_add != "N")
+            while (more_products_to_add == "Y")
             {
-                Console.WriteLine("Please enter product to add to the catalog:");
+                Console.WriteLine("Please enter the product to be added to the catalog:");
                 product_name = Console.ReadLine();
                 Console.WriteLine();
                 Console.WriteLine("Please enter a short description of the product:");
@@ -54,7 +54,7 @@ namespace CollectionsLab
             }
 
             //call method in Product to print out product catalog
-            Console.WriteLine("\nThis is your product catalog: \n");
+            Console.WriteLine("\nProduct catalog: \n");
             foreach (string name in productCatalog.Keys)
             {
                 productCatalog[name].Print(name);
